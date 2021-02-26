@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../styles/documentation.scss';
+import './index.scss';
 
 const DocumentationView = () => <h3>Documentation Here</h3>;
 
