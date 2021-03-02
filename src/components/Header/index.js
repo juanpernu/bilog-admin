@@ -1,10 +1,16 @@
 import React from 'react';
-import './header.scss';
+import { Link } from 'react-router-dom';
+
+import './index.scss';
 
 const Header = () => {
-    <div>
-        <h1>This will be a Header</h1>
-    </div>
-}
+    return (
+        <div className="header-container">
+            <span className="header-container--link">
+                <Link to="/">Bilog Admin</Link>
+            </span>
+        </div>
+    );
+};
 
 export default Header;
