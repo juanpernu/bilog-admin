@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Layout from './components/Layout';
 
 const NotFound = () => <p>Page not found</p>
 const ErrorBoundary = () => <p>Something went wrong</p>
@@ -15,9 +14,9 @@ const App = () => {
 		<Router>
 			<Suspense fallback={<Loading />}>
 				<Switch>
-					<Route exact path="/" render={() => <Layout><HomeView /></Layout>} />
-					<Route path="/posts" render={() => <Layout><PostsView /></Layout>} />
-					<Route path="/documentation" render={() => <Layout><DocumentationView /></Layout>} />
+					<Route exact path="/" render={() => <HomeView />} />
+					<Route path="/posts" render={() => <PostsView />} />
+					<Route path="/documentation" render={() => <DocumentationView />} />
 					<Route>
 						<NotFound />
 					</Route>
