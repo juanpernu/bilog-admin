@@ -1,11 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import './index.scss';
-import NavBar from '../Navbar';
 
 const Header = () => {
     return (
         <div className="header-container">
-            <NavBar />
+            <span className="header-container--link">
+                <Link to="/">Bilog Admin</Link>
+            </span>
         </div>
     );
 };
