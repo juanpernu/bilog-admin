@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from './components/Header';
 
 const NotFound = () => <p>Page not found</p>
 const ErrorBoundary = () => <p>Something went wrong</p>
@@ -13,7 +12,6 @@ const DocumentationView = lazy(() => import('./pages/documentation'));
 const App = () => {
 	return (
 		<Router>
-			<Header />
 			<Suspense fallback={<Loading />}>
 				<Switch>
 					<Route exact path="/" render={() => <HomeView />} />
