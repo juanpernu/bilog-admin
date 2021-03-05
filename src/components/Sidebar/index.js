@@ -1,10 +1,16 @@
 import React from 'react';
+import { SidebarComponent } from '@syncfusion/ej2-react-navigations';
+
 import './index.scss';
 
 const Sidebar = () => {
-    <div>
-        <h1>This will be a Sidebar</h1>
-    </div>
-}
+    return (
+        <div className="sidebar-container">
+            <SidebarComponent className="sidebar" closeOnDocumentClick={true} type="Push">
+                <h1>Sidebar Title</h1>
+            </SidebarComponent>
+        </div>
+    );
+};
 
 export default Sidebar;
