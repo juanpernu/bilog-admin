@@ -2,10 +2,9 @@
 @import "@syncfusion/ej2-react-navigations/styles/material.css";
 
 .sidebar-container {
-  margin-top: 68px;
-}
-
-.sidebar {
-  background-color: rgb(25, 118, 210);
-  color: #ffffff;
+  .sidebar {
+    background-color: rgb(25, 118, 210);
+    color: #ffffff;
+    top: 68px;
+  }
 }
