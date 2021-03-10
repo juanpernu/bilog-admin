@@ -5,7 +5,7 @@ import './index.scss';
 const DocumentationView = () => {
     return (
         <Layout>
-            <h3>Documentation Here</h3>;
+            <h3>Documentation Here</h3>
         </Layout>
     )
 }
