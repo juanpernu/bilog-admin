@@ -1,0 +1,68 @@
+module.exports = {
+    posts: [
+        {
+            id_post: 1,
+            thumbnail: "http://",
+            title: "Titulo1",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-16T00:00:00",
+        },
+        {
+            id_post: 2,
+            thumbnail: "http://",
+            title: "Titulo2",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-17T00:00:00",
+        },
+        {
+            id_post: 3,
+            thumbnail: "http://",
+            title: "Titulo3",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-18T00:00:00",
+        },
+        {
+            id_post: 4,
+            thumbnail: "http://",
+            title: "Titulo4",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-19T00:00:00",
+        },
+        {
+            id_post: 5,
+            thumbnail: "http://",
+            title: "Titulo5",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-20T00:00:00",
+        },
+        {
+            id_post: 6,
+            thumbnail: "http://",
+            title: "Titulo6",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-21T00:00:00",
+        },
+        {
+            id_post: 7,
+            thumbnail: "http://",
+            title: "Titulo7",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-22T00:00:00",
+        },
+        {
+            id_post: 8,
+            thumbnail: "http://",
+            title: "Titulo8",
+            text: "texto",
+            authors: "Autor",
+            date: "2021-02-23T00:00:00",
+        },
+    ]
+}
