@@ -1,3 +1,5 @@
-.layout-container--content {
-  margin: 0 160px;
+.layout-container {
+  &--content {
+    margin: 0 160px;
+  }
 }
