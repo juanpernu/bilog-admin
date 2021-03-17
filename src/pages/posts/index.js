@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
 import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Group, Inject, Page, Sort } from '@syncfusion/ej2-react-grids';
 import './index.scss';
-import { posts } from './data.js';
+import PostsService from '../../services/postsService';
+import postsGridMapper from '../../utils';
 
 const PostsView = () => {
+    const [post, setPost] = useState([]);
+    useEffect(async function () {
+        const data = await PostsService.getAllPosts();
+        setPost(data);
+    }, [])
     return (
         <Layout>
             <div className="grid-container">
                 <h1>Tabla de Posteos</h1>
-                <GridComponent dataSource={posts} allowPaging={true} pageSettings={{ pageSize: 6 }} allowFiltering={true} allowGrouping={true} allowSorting={true}>
+                <GridComponent dataSource={postsGridMapper(post)} allowPaging={true} pageSettings={{ pageSize: 6 }} allowFiltering={true} allowGrouping={true} allowSorting={true}>
                     <ColumnsDirective>
                         <ColumnDirective field='id_post' headerText='Post ID' width={100} />
                         <ColumnDirective field='thumbnail' headerText='Thumbnail' />
