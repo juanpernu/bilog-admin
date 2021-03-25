@@ -1,0 +1,127 @@
+@import "~../../styles/variables";
+@import "~../../styles/functions";
+
+// Fonts
+$button-font-size: 18px;
+$button-font-size-base-value: 18;
+$button-font-size-small: 16px;
+
+// Spacings
+$button-padding: 0 25px;
+$button-icon-size: em(18, $button-font-size-base-value);
+
+$button-spacing-16-base: $bilog-spacing-16;
+$button-spacing-16-small: $bilog-spacing-16;
+$button-spacing-16-base: $bilog-spacing-16;
+$button-spacing-8-small: $bilog-spacing-8;
+
+// Shadows
+$bilog-button-raised: 0 7px 20px $bilog-shadow-raised;
+
+// Workaround to make an <a> tag behave
+// like a button tag
+a[role="button"] {
+  display: flex;
+  align-items: center;
+}
+
+a[role="button"].button--full_width {
+  display: flex;
+  justify-content: center;
+  .button__content {
+    align-self: center;
+  }
+}
+
+.button {
+  display: inline-block;
+  width: auto;
+  min-width: em(142, $button-font-size-base-value);
+  outline-width: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 40px;
+  font-weight: $fw-regular;
+  line-height: 1;
+  padding: $button-padding;
+  text-align: center;
+  border-radius: $bilog-border-radius-5;
+  transition: all 0.15s ease;
+  -webkit-font-smoothing: antialiased;
+
+  &:link {
+    text-decoration: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    box-shadow: $bilog-button-raised;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: $button-icon-size;
+    max-height: $button-icon-size;
+  }
+
+  &--filled {
+    background-color: $bilog-blue;
+    color: $bilog-white;
+    border: 1px solid $bilog-blue;
+  }
+
+  &--transparent {
+    background-color: transparent;
+    color: $bilog-blue;
+    border: $bilog-blue;
+
+    &:hover {
+      background-color: rgba($bilog-blue, 0.15);
+    }
+  }
+
+  &--warning {
+    background-color: $bilog-red;
+    color: $bilog-white;
+    border: 1px solid $bilog-red;
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $bilog-blue;
+    border: $bilog-blue;
+  }
+
+  &--white {
+    background-color: rgba($bilog-white, 0);
+    color: $bilog-white;
+    border: transparent;
+  }
+
+  & + & {
+    margin: 0 0 0 $button-spacing-16-base;
+
+    @media only screen and (max-device-width: $screen-mobile) {
+      margin: 10px 0 0 0;
+    }
+  }
+
+  &--full_width {
+    width: 100%;
+    margin: $button-spacing-16-base 0 0;
+
+    & + & {
+      margin: $button-spacing-16-base 0 0;
+    }
+  }
+}
+
+.button--small {
+  min-width: 0;
+
+  & + & {
+    margin: 0 0 0 $button-spacing-8-small;
+  }
+}
