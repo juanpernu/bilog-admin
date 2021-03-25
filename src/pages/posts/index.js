@@ -4,6 +4,7 @@ import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Group, Inject
 import './index.scss';
 import PostsService from '../../services/PostsService';
 import postsGridMapper from '../../utils';
+import Button from '../../components/Button';
 
 const PostsView = () => {
     const [post, setPost] = useState([]);
@@ -13,7 +14,7 @@ const PostsView = () => {
     }, [])
     return (
         <Layout>
-            <div className="grid-container">
+            <div className="grid--container">
                 <h1>Tabla de Posteos</h1>
                 <GridComponent dataSource={postsGridMapper(post)} allowPaging={true} pageSettings={{ pageSize: 6 }} allowFiltering={true} allowGrouping={true} allowSorting={true}>
                     <ColumnsDirective>
@@ -26,6 +27,12 @@ const PostsView = () => {
                     </ColumnsDirective>
                     <Inject services={[Page, Filter, Group, Sort]} />
                 </GridComponent>
+                <div className="grid--container__button">
+                    <Button
+                        href='/post'
+                        fullWidth
+                    >Crear Post</Button>
+                </div>
             </div>
         </Layout>
     )
