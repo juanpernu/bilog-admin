@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
 import { ColumnDirective, ColumnsDirective, Filter, GridComponent, Group, Inject, Page, Sort } from '@syncfusion/ej2-react-grids';
 import './index.scss';
-import PostsService from '../../services/postsService';
+import PostsService from '../../services/PostsService';
 import postsGridMapper from '../../utils';
 
 const PostsView = () => {
