@@ -17,10 +17,10 @@ const Sidebar = ({ refe }) => {
             <SidebarComponent className="sidebar" type="Push" ref={SidebarRef}>
                 <h1 className="sidebar--title">Sidebar Title</h1>
                 <div className="sidebar--links">
-                    <span className="sidebar--links__posts">
+                    <span className="sidebar--link">
                         <a href="/posts">Posts</a>
                     </span>
-                    <span className="sidebar--links__documentation">
+                    <span className="sidebar--link">
                         <a href="/documentation">Documentation</a>
                     </span>
                 </div>
