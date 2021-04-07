@@ -1,21 +1,23 @@
 @import "~../../styles/variables";
 
-.error-view {
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  margin-top: 10%;
+.error {
+  &-view {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+  }
 
-  .error-image {
+  &-image {
     width: 180px;
   }
 
-  .error-title {
+  &-title {
     font-size: 24px;
     margin-bottom: 10px;
   }
 
-  .error-code {
+  &-code {
     font-size: $font-size-14;
     margin: 0 0 30px;
     color: $bilog-gray;

@@ -1,4 +1,4 @@
-import React, { logErrorToMyService } from 'react';
+import React from 'react';
 //import { Button } from '../../components/button';
 import errorImage from '../../static/error_network.svg';
 import './index.scss';
@@ -11,10 +11,6 @@ class ErrorBoundary extends React.Component {
 
     static getDerivedStateFromError(_error) {
         return { hasError: true };
-    }
-
-    componentDidCatch(error, errorInfo) {
-        logErrorToMyService(error, errorInfo);
     }
 
     render() {
