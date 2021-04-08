@@ -8,22 +8,22 @@ const Loading = () => <p>Loading...</p>
 const HomeView = lazy(() => import('./pages/home'));
 const PostsView = lazy(() => import('./pages/posts'));
 const DocumentationView = lazy(() => import('./pages/documentation'));
+const PostView = lazy(() => import('./pages/post'));
 
 const App = () => {
 	return (
 		<Router>
-			<ErrorBoundary>
-				<Suspense fallback={<Loading />}>
-					<Switch>
-						<Route exact path="/" render={() => <HomeView />} />
-						<Route path="/posts" render={() => <PostsView />} />
-						<Route path="/documentation" render={() => <DocumentationView />} />
-						<Route>
-							<NotFound />
-						</Route>
-					</Switch>
-				</Suspense>
-			</ErrorBoundary>
+			<Suspense fallback={<Loading />}>
+				<Switch>
+					<Route exact path="/" render={() => <HomeView />} />
+					<Route path="/posts" render={() => <PostsView />} />
+					<Route path="/documentation" render={() => <DocumentationView />} />
+					<Route path="/post" render={() => <PostView />} />
+					<Route>
+						<NotFound />
+					</Route>
+				</Switch>
+			</Suspense>
 		</Router>
 	);
 };

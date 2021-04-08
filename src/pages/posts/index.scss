@@ -1,4 +1,9 @@
-.grid-container {
-  margin: 10%;
-  margin-top: 5%;
+.grid {
+  &--container {
+    margin: 10%;
+    margin-top: 5%;
+    &__button {
+      width: 140px;
+    }
+  }
 }
