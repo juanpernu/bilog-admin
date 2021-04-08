@@ -1,0 +1,25 @@
+@import "~../../styles/variables";
+
+.error {
+  &-view {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+  }
+
+  &-image {
+    width: 180px;
+  }
+
+  &-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  &-code {
+    font-size: $font-size-14;
+    margin: 0 0 30px;
+    color: $bilog-gray;
+  }
+}
