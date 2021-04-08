@@ -29,11 +29,9 @@ const Form = ({ postData }) => {
     };
 
     const handleInput = (e) => {
-        console.log('evento', e);
         let value = e.target.value;
         let name = e.target.name;
-        console.log('value...', value);
-        console.log('name...', name);
+
         setPost((prevState) => { return { post: { ...prevState.post, [name]: value } } });
     };
 
