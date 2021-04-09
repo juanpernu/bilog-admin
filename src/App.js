@@ -1,8 +1,8 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NotFound from './pages/error/404';
 import ErrorBoundary from './pages/error';
 
-const NotFound = () => <p>Page not found</p>
 const Loading = () => <p>Loading...</p>
 
 const HomeView = lazy(() => import('./pages/home'));
